@@ -48,6 +48,10 @@ public class Propose<P extends Propose> implements Comparable<P> {
         this.date = date;
     }
 
+    public Propose() {
+
+    }
+
     /**
      * Compare of prices.
      *

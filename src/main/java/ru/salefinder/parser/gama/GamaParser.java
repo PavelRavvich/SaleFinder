@@ -7,6 +7,7 @@ import ru.salefinder.model.Propose;
 import ru.salefinder.parser.GenericParser;
 import ru.salefinder.parser.GenericPageBreaker;
 
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Queue;
@@ -29,7 +30,15 @@ public class GamaParser extends GenericParser {
     @Override
     protected Map<String, Propose> parseSinglePage(final Document document) {
         // TODO: 14.07.17 Парсишь страницу jsoup и пихаешь в конструктор
-        return null;
+        final Map<String, Propose> result = new HashMap<>();
+
+
+
+        //while(есть что парсить в document) {
+            final Propose propose = new Propose();
+            result.put(propose.getName(), propose);
+        //}
+        return result;
     }
 
     @Override
